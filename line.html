@@ -6,26 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Line</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    必須在伺服器環境下才能正常顯示
-    <div class="line-it-button" data-lang="zh_Hant" data-type="share-c" data-ver="3"
-        data-url="http://sc.piee.pw/J4RY3" data-color="default" data-size="small" data-count="false"
-        style="display: none;"></div>
+    必須在伺服器環境下才能正常顯示<br />
+    <div class="line-it-button" data-lang="zh_Hant" data-type="share-c" data-ver="3" data-url="http://sc.piee.pw/J4RY3"
+        data-color="default" data-size="small" data-count="false" style="display: none;"></div>
     <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async"
         defer="defer"></script>
-
+    <hr>
+    <hr>
+    <hr>
     <div class="line-it-button" data-lang="zh_Hant" data-type="share-c" data-ver="3" data-url="https://funday.asia/"
         data-color="default" data-size="large" data-count="false" style="display: none;"></div>
     <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async"
         defer="defer"></script>
-
-
-    <!-- <a href='javascript: void(window.open(https://lineit.line.me/share/ui?url=https://funday.asia/; .concat(encodeURIComponent(location.href)) ));'
-        title='分享給 LINE 好友'><img alt='分享給LINE好友 !' height='40'
-            src='https://1.bp.blogspot.com/-FvoBw8lnlC8/WHgA91RmxiI/AAAAAAAAIvA/CazIGx6Jlp8PJ4pE40kt2XMxwFmeBSdjgCLcB/s1600/168x40.png'
-            width='168' /></a> -->
+    <hr>
+    <hr>
+    <hr>
+    <a id="line-custom" href="">Line 分享</a>
+    <script>
+        $(function () {
+            $('#line-custom').click(function (e) {
+                e.preventDefault();
+                const url = 'https://eason920.github.io/share_btn/share_demo.html';
+                window.open('https://social-plugins.line.me/lineit/share?url=' + url, 'social', config = 'width= 500, height= 700');
+            });
+        });
+    </script>
 </body>
 
 </html>
