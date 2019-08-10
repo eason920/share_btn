@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!-- SHARE v-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="FUNDAY 分享推薦碼，好禮大家一起拿"/>
+    <meta property="og:title" content="FUNDAY 分享推薦碼，好禮大家一起拿"/>
+    <meta property="og:url" content="https://eason920.github.io"/>
+    <meta property="og:image" content="https://eason920.github.io/share_btn/images/share.png"/>
+    <meta property="og:description" content="透過 FUNDAY 線上學習平台，以實惠的價格，降低學習門檻，提供平等的教育資源，並配合數位化技術，讓學習與生活結合。透過語言學習，開拓更寬廣的國際視野，成為每一個人的終身學習夥伴。"/>
+    <!-- SHARE ^-->
+    <title>專屬推薦碼</title>
+    <link type="image/ico" href="./images/favicon.ico" rel="icon"/>
+    <!-- HEAD START v-->
+    <link href="./css/main.css" rel="stylesheet"/>
+    <link href="./css/main_self_study.css" rel="stylesheet"/>
+    <link href="./css/masonry1600.css" rel="stylesheet" media="(min-width: 768px)"/>
+    <link href="./css/head_web.css" rel="stylesheet"/>
+    <!-- HEADER END ^-->
+    <link href="./css/mgm_register.css" rel="stylesheet"/>
+    <script src="./assets/plugins/jquery/jquery-1.12.4-min.js"></script>
+    <script src="./js/mgm_register.js"></script>
+  </head>
+  <body>
+    <div class="mgm-wrapper">
+      <div class="mgmhead"><img src="images/FUNDAY_LOGO_B.png"/></div>
+      <form action="post">
+        <div class="mgm-group">
+          <div class="mgm-title">帳號</div>
+          <div class="mgm-prop">
+            <input class="mgm-ipt" placeholder="EMAIL電子信箱"/>
+          </div>
+        </div>
+        <div class="mgm-group">
+          <div class="mgm-title">密碼</div>
+          <div class="mgm-prop">
+            <input class="mgm-ipt" placeholder="手機號碼"/>
+          </div>
+        </div>
+        <div class="mgm-group mgm-mix">
+          <div class="mgm-title">中文姓名</div>
+          <div class="mgm-prop">
+            <input class="mgm-ipt" placeholder="中文姓名"/>
+          </div>
+          <div class="mgm-radio">
+            <input type="radio" id="sexMale" name="sex" checked="checked"/>
+            <label for="sexMale">男</label>
+            <input type="radio" id="sexFemale" name="sex"/>
+            <label for="sexFemale">女</label>
+          </div>
+        </div>
+        <div class="mgm-group">
+          <div class="mgm-title">推薦碼</div>
+          <div class="mgm-prop">
+            <input class="mgm-ipt is-code" disabled="disabled"/>
+          </div>
+        </div>
+        <div class="mgminfo">
+          <div class="mgminfo-box">
+            <div class="mgminfo-must"> <span>*</span>必填</div><a class="mgminfo-check" href="*">輸入驗證碼</a>
+          </div>
+          <div class="mgminfo-text">註冊即代表同意FUNDAY的<a href="#">服務條款與隱私權政策</a>，並提供予贊助廠商健康力作為行銷目的之使用，請於註冊後填寫收件資訊並贈健康力體驗包，謝謝。</div>
+          <div class="mgminfo-btnbox"><a class="mgminfo-btn mgminfo-normal" href="#">註冊登入領取好禮</a><a class="mgminfo-btn mgminfo-fb" href="#">Facebook登入領取好禮</a></div>
+        </div>
+      </form>
+    </div>
+    <script>
+      $(function(){
+      	const url= location.href;
+      	const val = '?code';
+      	const count = 7;
+      	const code = url.substr(url.indexOf(val) + val.length + 1, count);
+      	const $target = $('.mgm-ipt.is-code');
+      	if( url.indexOf(val) >= 0 ){
+      		$target.attr('value', code);
+      	}else{
+      		$target.attr('value', 'error');
+      	}
+      });		
+    </script>
+  </body>
+</html>
