@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <title>copy link</title>
+    <script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
 </head>
 
 <body>
-    <script type="text/javascript">
-        function copyUrl2() {
-            var Url2 = document.getElementById("biao1");
-            Url2.select(); // 選擇物件
-            document.execCommand("Copy"); // 執行瀏覽器複製命令
-            alert("已複製好，可貼粘。");
-        }
-    </script>
-    <textarea cols="20" rows="10" id="biao1">使用者定義的程式碼區域</textarea>
-    <input type="button" onClick="copyUrl2()" value="點選複製程式碼" />
-
-    <a href="mailto:eason@gmail.com">send</a>
+	<!-- <textarea class='is-source'>使用者定義的程式碼區域</textarea> -->
+	<input type='text' class='is-source' value='input value'>
+	<!-- <div class='is-source'>div element</div> -->
+	可以是 textarea 帶 value 或使用者自填<br/>
+	可以是 input type = 'text'<br/>
+	但以上 ele 
+	<ul>
+		<li>不可有disable 屬性 , 會導致失效</li>
+		<li>不可 visibility: hidden</li>
+		<li>不可 overflow: hidden , 或加外框 hidden</li>
+		<li>唯一解法是使 input 寬度為 1 , color 為白 , 亦可 transform: scale(.1)</li>
+	</ul>
+	<br/>
+	不可為 div<br/>
+	<input type='button' value='點選複製程式碼' />
+	<script>
+		$('input[type=\'button\']').click(function(){
+			var $source = $('.is-source');
+			$source.select(); // 選擇物件
+			document.execCommand('Copy'); // 執行瀏覽器複製命令
+			console.log('copyed, the text is ' + $source.val() )
+		});
+   </script>
 </body>
-
 </html>
