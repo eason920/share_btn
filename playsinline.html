@@ -4,17 +4,32 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>YOUTUBE</title>
+	<title>YOUTUBE 撥放不全屏</title>
 </head>
 <body>
+	<h1>v 自動撥放失效: url?屬性</h1>
+	<h2>plays inline 成功</h2>
 	<iframe 
 		src="https://www.youtube.com/embed/wb_E3HnLwG4?playsinline=1&autoplay=1" 
 	></iframe>
+
+
+	<hr>
+	<hr>
+	<hr>
+	<h1>v 自動撥放失效: alow 屬性值</h1>
+	<h2>plays inline 成功</h2>
 	<iframe 
-		src="https://www.youtube.com/embed/wb_E3HnLwG4?playsinline=1&autoplay=1"
-		allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+		src="https://www.youtube.com/embed/wb_E3HnLwG4"
+		allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; playsinline"
 	></iframe>
 
+
+	<hr>
+	<hr>
+	<hr>
+	<h1>v 自動撥放成功: API 動態加載</h1>
+	<h2>plays inline 成功 , 但是因 API 的自動撥放而直接與全屏脫鉤</h2>
 	<div id="player"></div>
 	<script>
 		var tag = document.createElement('script');
